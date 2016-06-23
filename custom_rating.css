@@ -1,0 +1,33 @@
+.star-rating span:hover {
+    color: brown;
+}
+.star-rating span{
+    color: brown;
+    font-size: 50px;
+    cursor: default;
+    text-decoration: none;
+    line-height: 50px;
+    unicode-bidi:embed;
+    direction:rtl;
+}
+.star-rating {
+    display:inline-block;
+    padding: 2px;
+}
+
+.star-rating span:hover:before, 
+.star-rating span:hover ~ span:before, 
+.star-rating span.active:before,
+.star-rating:hover span.active:hover:before,
+.star-rating:hover span:hover ~ span.active:before{
+    content: "\2605";
+}
+.star-rating span:before, .star-rating:hover span.active:before{
+    content: "\2606";
+}
+.star-rating-rtl s:hover:after{
+    content: "\2605";
+}
+.star-rating-rtl s:after {
+    content: "\2606";
+}
